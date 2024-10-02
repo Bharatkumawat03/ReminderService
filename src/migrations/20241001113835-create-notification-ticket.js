@@ -17,14 +17,15 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      receptionEmail: {
+      recepientEmail: {
         type: Sequelize.STRING,
         allowNull: false
       },
       status: {
         type: Sequelize.ENUM,
         allowNull: false,
-        values: ["PENDING", "SUCCESS", "FAILED"]
+        values: ["PENDING", "SUCCESS", "FAILED"],
+        defaultValue: "PENDING"
       },
       notificationTime: {
         type: Sequelize.DATE,

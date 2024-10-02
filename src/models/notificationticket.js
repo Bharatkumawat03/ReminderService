@@ -22,14 +22,15 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    receptionEmail: {
+    recepientEmail: {
       type: DataTypes.STRING,
       allowNull: false
     },
     status: {
       type: DataTypes.STRING,
       allowNull: false,
-      values: ["PENDING", "SUCCESS", "FAILED"]
+      values: ["PENDING", "SUCCESS", "FAILED"],
+      defaultValue: "PENDING"
     },
     notificationTime: {
       type: DataTypes.STRING,
